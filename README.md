@@ -37,6 +37,7 @@ Para obtener los resultados de una búsqueda, realiza una solicitud GET a `/api/
     }
   ]
 }
+```
 
 ### Obtener Detalles de un Artículo
 
