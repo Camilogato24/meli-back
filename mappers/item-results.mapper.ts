@@ -1,7 +1,7 @@
 import { Item, Price } from "../interfaces/minified.interfaces";
 import { Result } from "../interfaces/search.interfaces";
 
-export const itemMapper = (results: Result[]): Item[] => {
+export const itemsMapper = (results: Result[]): Item[] => {
   return results.map((result) => ({
     id: result.id,
     title: result.title,
@@ -12,10 +12,13 @@ export const itemMapper = (results: Result[]): Item[] => {
   }));
 };
 
-const mapPrice = (price: number): Price => {
+export const mapPrice = (price: number): Price => {
+  const fixPrice = Math.floor(price);
+  const decimals = price - parseFloat(price.toFixed(0));
+  const fixDecimals = parseFloat(decimals.toFixed(2)); 
   return {
-    amount: price,
+    amount: fixPrice,
     currency: "ARS",
-    decimals: 0,
+    decimals: fixDecimals,
   };
 };

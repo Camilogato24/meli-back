@@ -32,9 +32,9 @@ export interface Sort {
   name: string;
 }
 export interface Result {
-  id?: string;
-  title?: string;
-  condition?: string;
+  id: string;
+  title: string;
+  condition: string;
   thumbnail_id?: string;
   catalog_product_id?: string;
   listing_type_id?: string;
@@ -43,7 +43,7 @@ export interface Result {
   site_id?: string;
   category_id?: string;
   domain_id?: string;
-  thumbnail?: string;
+  thumbnail: string;
   currency_id?: string;
   order_backend?: number;
   price: number;
@@ -65,6 +65,7 @@ export interface Result {
   promotions?: any[];
   differential_pricing?: Differentialpricing;
   inventory_id?: any;
+  sold_quantity: number;
 }
 export interface Differentialpricing {}
 export interface Installments {
