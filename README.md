@@ -5,7 +5,7 @@
 ## Endpoints Disponibles
 
 - `GET /api/items`: Obtiene los resultados de una búsqueda según un término específico.
-
+- `GET /api/items/:id`: Obtiene los detalles de un artículo específico por su ID.
 
 ## Uso de la API
 
@@ -33,21 +33,16 @@ Para obtener los resultados de una búsqueda, realiza una solicitud GET a `/api/
       },
       "picture": "https://example.com/iphone.jpg",
       "condition": "Nuevo",
-      "free_shipping": true,
+      "free_shipping": true
     }
   ]
 }
 
+### Obtener Detalles de un Artículo
 
-- `GET /api/items/:id`: Obtiene los detalles de un artículo específico por su ID.
+Para obtener los detalles de un artículo específico, realiza una solicitud GET a `/api/items/:id` donde `:id` es el ID único del artículo.
 
-## Uso de la API
-
-### Obtener Resultados de Búsqueda
-
-Para obtener los resultados de una búsqueda, realiza una solicitud GET a `/api/items` con el parámetro `q` que especifica el término de búsqueda.
-
-### Resultado de Búsqueda
+### Resultado del Artículo
 
 ```json
 {
@@ -57,17 +52,17 @@ Para obtener los resultados de una búsqueda, realiza una solicitud GET a `/api/
   },
   "categories": ["Electrónica", "Celulares y Teléfonos"],
   "item": {
-      "id": "MLA123456789",
-      "title": "iPhone 12",
-      "price": {
-        "amount": 100000,
-        "currency": "ARS",
-        "decimals": 0.22
-      },
-      "picture": "https://example.com/iphone.jpg",
-      "condition": "Nuevo",
-      "free_shipping": true,
-      "sold_quantity": 19, 
-      "description": "Descripción"
-    }
+    "id": "MLA123456789",
+    "title": "iPhone 12",
+    "price": {
+      "amount": 100000,
+      "currency": "ARS",
+      "decimals": 0.22
+    },
+    "picture": "https://example.com/iphone.jpg",
+    "condition": "Nuevo",
+    "free_shipping": true,
+    "sold_quantity": 19, 
+    "description": "Descripción"
+  }
 }
