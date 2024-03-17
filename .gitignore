@@ -1,0 +1,9 @@
+# Ignorar directorios generados
+node_modules/
+dist/
+
+# Ignorar archivos de configuración local (ejemplo: .env)
+.env
+.DS_Store
+
+# Agrega aquí cualquier otro archivo o directorio que desees ignorar
