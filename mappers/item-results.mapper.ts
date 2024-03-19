@@ -8,7 +8,8 @@ export const itemsMapper = (results: Result[]): Item[] => {
     price: mapPrice(result.price),
     picture: result.thumbnail,
     condition: result.condition,
-    free_shipping: result.shipping?.free_shipping || false,
+    free_shipping: result.shipping?.free_shipping,
+    location: result.location?.city.name ? result.location?.city.name : ""
   }));
 };
 

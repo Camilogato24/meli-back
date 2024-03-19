@@ -14,7 +14,7 @@ export interface Availablefilter {
   id?: string;
   name?: string;
   type?: string;
-  values?: any[];
+  values?: AvailableValue[];
 }
 export interface Filter {
   id?: string;
@@ -25,7 +25,13 @@ export interface Filter {
 export interface Value {
   id: string;
   name: string;
-  path_from_root: Sort[];
+  path_from_root: Sort[]
+}
+
+export interface AvailableValue {
+  id: string;
+  name: string;
+  results: number;
 }
 export interface Sort {
   id: string;
@@ -58,6 +64,7 @@ export interface Result {
   stop_time?: string;
   seller?: Seller;
   attributes?: Attribute[];
+  location: Location;
   installments?: Installments;
   winner_item_id?: any;
   catalog_listing?: boolean;
@@ -104,4 +111,20 @@ export interface Paging {
   primary_results: number;
   offset: number;
   limit: number;
+}
+
+export interface Location {
+  address_line: string;
+  zip_code: string;
+  subneighborhood?: any;
+  neighborhood: Neighborhood;
+  city: Neighborhood;
+  state: Neighborhood;
+  country: Neighborhood;
+  latitude: number;
+  longitude: number;
+}
+interface Neighborhood {
+  id: string;
+  name: string;
 }

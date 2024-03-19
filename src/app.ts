@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import morgan from "morgan";
+import cors from "cors";
 import appRouter from "./../routes/index.routes"
 
 export class App {
@@ -20,6 +21,7 @@ export class App {
 
     middleware() {
         this.app.use(morgan("dev"));
+        this.app.use(cors());
     }
 
     routes() {

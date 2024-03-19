@@ -1,6 +1,6 @@
 export interface SearchMinified {
   author: Author;
-  categories: string[];
+  categories: any;
   items: Item[];
 }
 export interface Item {
@@ -10,6 +10,7 @@ export interface Item {
   picture?: string;
   condition?: string;
   free_shipping?: boolean;
+  location?: string;
 }
 export interface Price {
   currency: string;

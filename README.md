@@ -67,3 +67,4 @@ Para obtener los detalles de un artículo específico, realiza una solicitud GET
     "description": "Descripción"
   }
 }
+```
