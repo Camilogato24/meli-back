@@ -15,3 +15,5 @@ interface Item {
   description: string;
   categories: string[]
 }
+
+export type ProductCondition = "new" | "not_specified" | "used";

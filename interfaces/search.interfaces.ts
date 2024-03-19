@@ -1,3 +1,5 @@
+import { ProductCondition } from "./item-minified.interfaces";
+
 export interface SearchBig {
   site_id: string;
   country_default_time_zone: string;
@@ -40,7 +42,7 @@ export interface Sort {
 export interface Result {
   id: string;
   title: string;
-  condition: string;
+  condition: ProductCondition;
   thumbnail_id?: string;
   catalog_product_id?: string;
   listing_type_id?: string;
